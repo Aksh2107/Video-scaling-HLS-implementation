@@ -8,5 +8,9 @@ Video scaling, whether upscaling or downscaling, is the
 process of generating pixels that did not exist in the original
 image.
 
-
-FPGAs with a slew of high-performance DSP structures are ideal for such algorithms, and FPGA vendors are starting to offer user-configurable video-scaling IP blocks that are speedily configured for any application.
+There are many methods for generating new pixels: thesimplest is called the nearest neighbor method, or 11 interpolation. In this method a new pixel value is simply equal to the value of the preceding pixel. This is the simplest example of
+scaling and requires minimal hardware resources since no
+calculations have to be done
+In a slightly more sophisticated approach, called bilinear
+scaling, a new pixel is equal to the average of the two neighboring
+pixels in both the vertical and horizontal dimensions.
